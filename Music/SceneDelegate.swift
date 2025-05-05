@@ -17,10 +17,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let SongsViewController = SongsViewController(nibName: nil, bundle: nil)
-        
+//
+        let artistListViewController = ArtistListBuilder.showArtistListBuilder()
+        let navigationController = UINavigationController(rootViewController: artistListViewController)
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.navigationBar.prefersLargeTitles = false
+        navigationController.topViewController?.navigationItem.title = "Artists"
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = SongsViewController
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
     }
