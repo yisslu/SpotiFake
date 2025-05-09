@@ -62,8 +62,8 @@
             filePath = "Music/ArtistList/View/ArtistListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "Music/ArtistList/View/ArtistListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,9 +110,9 @@
             filePath = "Music/ArtistList/Router/ArtistListRouter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "sendInfoToAlbumView(name:navigationController:)"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "sendInfoToAlbumView(id:navigationController:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -128,7 +128,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
             endingLineNumber = "15"
-            landmarkName = "sendInfoToSongsListView(albumName:navigationController:)"
+            landmarkName = "showAlbums(with:navigationController:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -194,6 +194,66 @@
             endingLineNumber = "12"
             landmarkName = "artistAlbumList"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A2212B66-DCE0-40F3-99B1-1F0C9E6A0AB3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Music/ArtistList/Interactor/ArtistListInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "fetchArtistList()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A2212B66-DCE0-40F3-99B1-1F0C9E6A0AB3 - d78b71b8d5b11ab3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Music.ArtistListInteractor.fetchArtistList() -&gt; ()"
+                  moduleName = "Music.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jesuslugo/Documents/Diplomado/repositorios/SpotiFake/Music/ArtistList/Interactor/ArtistListInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15">
+               </Location>
+               <Location
+                  uuid = "A2212B66-DCE0-40F3-99B1-1F0C9E6A0AB3 - d78b71b8d5b11ab3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Music.ArtistListInteractor.fetchArtistList() -&gt; ()"
+                  moduleName = "Music.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jesuslugo/Documents/Diplomado/repositorios/SpotiFake/Music/ArtistList/Interactor/ArtistListInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15">
+               </Location>
+               <Location
+                  uuid = "A2212B66-DCE0-40F3-99B1-1F0C9E6A0AB3 - d78b71b8d5b11ab3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Music.ArtistListInteractor.fetchArtistList() -&gt; ()"
+                  moduleName = "Music.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jesuslugo/Documents/Diplomado/repositorios/SpotiFake/Music/ArtistList/Interactor/ArtistListInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

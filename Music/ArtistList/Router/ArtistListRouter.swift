@@ -10,10 +10,11 @@ import UIKit
 
 
 class ArtistListRouter: ArtistListRouterProtocol{
+    var albumRouter: AlbumListRouterProtocol?
     
-    func sendInfoToAlbumView(name: String, navigationController: UINavigationController){
+    func sendInfoToAlbumView(id: Int, navigationController: UINavigationController){
         let albumsViewController = AlbumListBuilder.showAlbumListBuilder()
-        albumsViewController.artistName = name
-        navigationController.pushViewController(albumsViewController, animated: true)
+        
+        
     }
 }

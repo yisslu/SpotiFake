@@ -34,5 +34,5 @@ protocol AlbumListOutputInteractorProtocol: AnyObject{
 }
 
 protocol AlbumListRouterProtocol: AnyObject{
-    func sendInfoToSongsListView(albumName: String,navigationController: UINavigationController)
+    func showAlbums(with id: Int,navigationController: UINavigationController)
 }

@@ -8,8 +8,9 @@
 import UIKit
 
 
-class ArtistListEntity {
-    var artistModel = ArtistModel(artistsNames: ["The Beatles","Queen","Pink Floyd","Led Zeppelin","David Bowie"])
+struct ArtistListEntity: Decodable{
+    let id: Int
+    let name: String
 }
 
 

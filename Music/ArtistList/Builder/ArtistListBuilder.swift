@@ -11,13 +11,12 @@ import UIKit
 
 enum ArtistListBuilder{
     static func showArtistListBuilder() -> UIViewController{
-        let view = ArtistListViewController()
         let router = ArtistListRouter()
         let interactor = ArtistListInteractor()
-        let presenter = ArtistListPresenter(view: view, router: router, interactor: interactor)
-        view.presenter = presenter
-        interactor.presenter = presenter
-        
+        let mapper = MapperArtistList()
+        let presenter = ArtistListPresenter(router: router, interactor: interactor, mapper: mapper)
+        let view = ArtistListViewController(presenter: presenter)
+        presenter.view = view
         return view
     }
 }

@@ -15,24 +15,19 @@ protocol ArtistListPresenterProtocol: AnyObject {
     var interactor: ArtistListInputInteractorProtocol {get set}
     
     func getArtistList()
-    func sendArtistName(with name: String, navigationController: UINavigationController)
+    func sendArtistName(with id: Int, navigationController: UINavigationController)
 }
 
 protocol ArtistListViewProtocol: AnyObject{
-    var presenter: ArtistListPresenterProtocol? {get set}
     func updateView(artistList: [String])
 }
 
 protocol ArtistListInputInteractorProtocol: AnyObject{
-    var presenter: ArtistListOutputInteractorProtocol? {get set}
-    func fetchArtistList()
-}
-
-protocol ArtistListOutputInteractorProtocol: AnyObject{
-    
-    func artistListDidFetch(artistList: [String])
+    func fetchArtistList () -> [ArtistListEntity]
 }
 
 protocol ArtistListRouterProtocol: AnyObject{
-    func sendInfoToAlbumView(name: String, navigationController: UINavigationController)
+    var albumRouter: AlbumListRouterProtocol? { get }
+    
+    func sendInfoToAlbumView(id: Int, navigationController: UINavigationController)
 }
