@@ -10,7 +10,7 @@ import UIKit
 class ArtistListViewController: UIViewController, ArtistListViewProtocol, UITableViewDataSource, UITableViewDelegate {
     
     
-    var presenter: ArtistListPresenterProtocol?
+    var presenter: ArtistListPresenterProtocol
     var artistArray: [String] = []
     
     private var customTableView: UITableView = {
@@ -21,10 +21,19 @@ class ArtistListViewController: UIViewController, ArtistListViewProtocol, UITabl
         return table
     }()
     
+    init(presenter: ArtistListPresenterProtocol) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
-        presenter?.getArtistList()
+        presenter.getArtistList()
         view.backgroundColor = .systemBackground
         view.addSubview(customTableView)
         addTableView()
@@ -56,6 +65,6 @@ class ArtistListViewController: UIViewController, ArtistListViewProtocol, UITabl
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.sendArtistName(with: artistArray[indexPath.row], navigationController: navigationController!)
+        presenter.sendArtistName(with: indexPath.row, navigationController: navigationController!)
     }
 }

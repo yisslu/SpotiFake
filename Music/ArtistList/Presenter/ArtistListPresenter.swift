@@ -8,31 +8,27 @@
 import UIKit
 
 class ArtistListPresenter: ArtistListPresenterProtocol{
-    weak var view: ArtistListViewProtocol?
+    var view: ArtistListViewProtocol?
     var router: ArtistListRouterProtocol
     var interactor: ArtistListInputInteractorProtocol
+    var mapper: MapperArtistList
+    private var artistList: [ArtistListEntity] = []
     
-    init(view: ArtistListViewProtocol, router: ArtistListRouterProtocol, interactor: ArtistListInputInteractorProtocol) {
-        self.view = view
+    init(router: ArtistListRouterProtocol, interactor: ArtistListInputInteractorProtocol, mapper: MapperArtistList) {
         self.router = router
         self.interactor = interactor
+        self.mapper = mapper
     }
     
     func getArtistList(){
-        interactor.fetchArtistList()
+        artistList = interactor.fetchArtistList()
+        let artists = mapper.map(this: artistList)
+        view?.updateView(artistList: artists)
     }
     
-    func sendArtistName(with name: String, navigationController: UINavigationController) {
-        router.sendInfoToAlbumView(name: name, navigationController: navigationController)
+    func sendArtistName(with id: Int, navigationController: UINavigationController) {
+        let id = artistList[id].id
+        router.sendInfoToAlbumView(id: id, navigationController: navigationController)
     }
-    
-}
-
-extension ArtistListPresenter: ArtistListOutputInteractorProtocol{
-    
-    func artistListDidFetch(artistList: [String]) {
-        view?.updateView(artistList: artistList)
-    }
-    
     
 }

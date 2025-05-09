@@ -10,11 +10,11 @@ import UIKit
 
 
 enum AlbumListBuilder{
-    static func showAlbumListBuilder() -> AlbumListViewController{
+    static func showAlbumListBuilder(with id: Int) -> AlbumListViewController{
         let view = AlbumListViewController()
         let router = AlbumListRouter()
         let interactor = AlbumListInteractor()
-        let presenter = AlbumListPresenter(view: view, router: router, interactor: interactor)
+        let presenter = AlbumListPresenter(view: view, router: router, interactor: interactor, artistId: id)
         view.presenter = presenter
         interactor.presenter = presenter
         

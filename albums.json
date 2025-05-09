@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "artistName": "The Beatles",
+    "albums": [
+      {
+        "image": "beatlesAbbeyRoad",
+        "title": "Abbey Road"
+      },
+      {
+        "image": "letItBeBeatles",
+        "title": "Let It Be"
+      },
+      {
+        "image": "revolverBeatles",
+        "title": "Revolver"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "artistName": "Queen",
+    "albums": [
+      {
+        "image": "queenAlbum1",
+        "title": "A Night at the Opera"
+      },
+      {
+        "image": "queenAlbum2",
+        "title": "News of the World"
+      },
+      {
+        "image": "queenAlbum3",
+        "title": "The Game"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "artistName": "Pink Floyd",
+    "albums": [
+      {
+        "image": "pinkfloydAlbum1",
+        "title": "The Dark Side of the Moon"
+      },
+      {
+        "image": "pinkfloydAlbum2",
+        "title": "Wish You Were Here"
+      },
+      {
+        "image": "pinkfloydAlbum3",
+        "title": "Animals"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "artistName": "Led Zeppelin",
+    "albums": [
+      {
+        "image": "zeppelinAlbum1",
+        "title": "Led Zeppelin IV"
+      },
+      {
+        "image": "zeppelinAlbum2",
+        "title": "Physical Graffiti"
+      },
+      {
+        "image": "zeppelinAlbum3",
+        "title": "Houses if the Holy"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "artistName": "David Bowie",
+    "albums": [
+      {
+        "image": "bowieAlbum1",
+        "title": "The Rise and Fall of Ziggy Stardust"
+      },
+      {
+        "image": "bowieAlbum2",
+        "title": "Heroes"
+      },
+      {
+        "image": "bowieAlbum3",
+        "title": "Hunky Dory"
+      }
+    ]
+  }
+]

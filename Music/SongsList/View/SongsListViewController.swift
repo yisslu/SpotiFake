@@ -19,7 +19,7 @@ class SongsListViewController: UIViewController, SongsListViewProtocol, UITableV
     
     var presenter: (any SongsListPresenterProtocol)?
     
-    var songsArray: [SongsModel] = []
+    var songsArray: Int?
     var albumName: String?
     
     private var customTableView: UITableView = {
@@ -58,7 +58,7 @@ class SongsListViewController: UIViewController, SongsListViewProtocol, UITableV
         customTableView.delegate = self
     }
     
-    func updateView(songsList: [SongsModel], image: UIImage) {
+    func updateView(songsList: Int, image: UIImage) {
         songsArray = songsList
         imageView = UIImageView(image: image)
     }
@@ -83,16 +83,17 @@ class SongsListViewController: UIViewController, SongsListViewProtocol, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return songsArray.count
+//        return songsArray.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell2")
-        cell.textLabel!.text = songsArray[indexPath.row].songName
-        
-        let time = presenter?.transformSecondsToMinutesFor(this: songsArray[indexPath.row].duration)
-        
-        cell.detailTextLabel?.text = time
+//        cell.textLabel!.text = songsArray[indexPath.row].songName
+//        
+//        let time = presenter?.transformSecondsToMinutesFor(this: songsArray[indexPath.row].duration)
+//        
+//        cell.detailTextLabel?.text = time
         return cell
     }
     

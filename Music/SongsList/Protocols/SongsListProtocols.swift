@@ -21,7 +21,7 @@ protocol SongsListPresenterProtocol: AnyObject {
 
 protocol SongsListViewProtocol: AnyObject{
     var presenter: SongsListPresenterProtocol? {get set}
-    func updateView(songsList: [SongsModel], image: UIImage)
+    func updateView(songsList: Int, image: UIImage)
 }
 
 protocol SongsListInputInteractorProtocol: AnyObject{
@@ -31,7 +31,7 @@ protocol SongsListInputInteractorProtocol: AnyObject{
 
 protocol SongsListOutputInteractorProtocol: AnyObject{
     
-    func songsListDidFetch(songsList: [SongsModel], image: UIImage)
+    func songsListDidFetch(songsList: Int, image: UIImage)
 }
 
 protocol SongsListRouterProtocol: AnyObject{
