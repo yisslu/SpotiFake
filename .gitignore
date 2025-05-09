@@ -93,4 +93,4 @@ iOSInjectionProject/
 
 .DS_Store
 *.xcbkptlist
-Music.xcodeproj/xcuserdata/*
+Music.xcodeproj/xcuserdata/*.xuserdatad/*
