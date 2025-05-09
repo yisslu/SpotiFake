@@ -13,8 +13,9 @@ class ArtistListRouter: ArtistListRouterProtocol{
     var albumRouter: AlbumListRouterProtocol?
     
     func sendInfoToAlbumView(id: Int, navigationController: UINavigationController){
-        let albumsViewController = AlbumListBuilder.showAlbumListBuilder()
+        let albumsViewController = AlbumListBuilder.showAlbumListBuilder(with: id)
         
+        navigationController.pushViewController(albumsViewController, animated: true)
         
     }
 }

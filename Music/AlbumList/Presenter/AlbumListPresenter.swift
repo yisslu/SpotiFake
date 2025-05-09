@@ -9,28 +9,32 @@ import UIKit
 
 class AlbumListPresenter: AlbumListPresenterProtocol{
     
+    
+    
     weak var view: AlbumListViewProtocol?
     var router: AlbumListRouterProtocol
     var interactor: AlbumListInputInteractorProtocol
+    var artistId: Int
     
-    init(view: AlbumListViewProtocol, router: AlbumListRouterProtocol, interactor: AlbumListInputInteractorProtocol) {
+    init(view: AlbumListViewProtocol, router: AlbumListRouterProtocol, interactor: AlbumListInputInteractorProtocol, artistId: Int) {
         self.view = view
         self.router = router
         self.interactor = interactor
+        self.artistId = artistId
     }
     
-    func getAlbumList(with name: String){
-        interactor.fetchAlbumList(with: name)
+    func getAlbumList() {
+        interactor.fetchAlbumList(with: artistId)
     }
     
-    func sendAlbumName(whith name: String, navigationController: UINavigationController) {
-        router.sendInfoToSongsListView(albumName: name, navigationController: navigationController)
+    func sendAlbumName(whith id: Int, navigationController: UINavigationController) {
+        //router.sendInfoToSongsListView(albumName: name, navigationController: navigationController)
     }
 }
 
-extension AlbumListPresenter: AlbumListOutputInteractorProtocol{
+extension AlbumListPresenter {
     
-    func albumListDidFetch(albumList: [AlbumModel]) {
+    func albumListDidFetch(albumList: ArtistAlbumEntity) {
         view?.updateView(albumList: albumList)
     }
     

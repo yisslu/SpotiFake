@@ -14,23 +14,19 @@ protocol AlbumListPresenterProtocol: AnyObject {
     var router: AlbumListRouterProtocol {get set}
     var interactor: AlbumListInputInteractorProtocol {get set}
     
-    func getAlbumList(with name: String)
-    func sendAlbumName(whith name: String,navigationController: UINavigationController)
+    func getAlbumList()
+    func sendAlbumName(whith id: Int,navigationController: UINavigationController)
+    func albumListDidFetch(albumList: ArtistAlbumEntity)
 }
 
 protocol AlbumListViewProtocol: AnyObject{
     var presenter: AlbumListPresenterProtocol? {get set}
-    func updateView(albumList: [AlbumModel])
+    func updateView(albumList: ArtistAlbumEntity)
 }
 
 protocol AlbumListInputInteractorProtocol: AnyObject{
-    var presenter: AlbumListOutputInteractorProtocol? {get set}
-    func fetchAlbumList(with name: String)
-}
-
-protocol AlbumListOutputInteractorProtocol: AnyObject{
-    
-    func albumListDidFetch(albumList: [AlbumModel])
+    var presenter: AlbumListPresenterProtocol? { get }
+    func fetchAlbumList(with id: Int)
 }
 
 protocol AlbumListRouterProtocol: AnyObject{

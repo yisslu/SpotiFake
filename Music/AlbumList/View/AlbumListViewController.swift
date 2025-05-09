@@ -10,8 +10,7 @@ import UIKit
 class AlbumListViewController: UIViewController, AlbumListViewProtocol, UITableViewDataSource, UITableViewDelegate {
     
     var presenter: AlbumListPresenterProtocol?
-    var albumArray: [AlbumModel] = []
-    var artistName: String?
+    var albums =  [Album()]
     
     private var customTableView: UITableView = {
         let table = UITableView()
@@ -25,16 +24,18 @@ class AlbumListViewController: UIViewController, AlbumListViewProtocol, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
-        presenter?.getAlbumList(with: artistName ?? "")
+        presenter?.getAlbumList()
         view.backgroundColor = .systemBackground
         view.addSubview(customTableView)
         addTableView()
         customTableView.dataSource = self
         customTableView.delegate = self
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-    func updateView(albumList: [AlbumModel]) {
-        albumArray = albumList
+    func updateView(albumList: ArtistAlbumEntity) {
+        albums = albumList.albums
+        title = albumList.artistName
     }
     
     func addTableView(){
@@ -47,17 +48,20 @@ class AlbumListViewController: UIViewController, AlbumListViewProtocol, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return albumArray.count
+        return albums.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel!.text = albumArray[indexPath.row].title
-        cell.imageView!.image = albumArray[indexPath.row].image
+        
+        let album = albums[indexPath.row]
+        
+        cell.textLabel!.text = album.title
+        cell.imageView!.image = UIImage(named: album.image)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.sendAlbumName(whith: albumArray[indexPath.row].title, navigationController: navigationController!)
+        presenter?.sendAlbumName(whith: indexPath.row, navigationController: navigationController!)
     }
 }

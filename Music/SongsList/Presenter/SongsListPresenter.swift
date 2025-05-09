@@ -38,7 +38,7 @@ class SongsListPresenter: SongsListPresenterProtocol{
 }
 
 extension SongsListPresenter: SongsListOutputInteractorProtocol{
-    func songsListDidFetch(songsList: [SongsModel], image: UIImage) {
+    func songsListDidFetch(songsList: Int, image: UIImage) {
         view?.updateView(songsList: songsList, image: image)
     }
 }
