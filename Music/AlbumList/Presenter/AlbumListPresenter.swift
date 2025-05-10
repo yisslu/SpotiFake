@@ -15,6 +15,7 @@ class AlbumListPresenter: AlbumListPresenterProtocol{
     var router: AlbumListRouterProtocol
     var interactor: AlbumListInputInteractorProtocol
     var artistId: Int
+    var albumList = ArtistAlbumEntity()
     
     init(view: AlbumListViewProtocol, router: AlbumListRouterProtocol, interactor: AlbumListInputInteractorProtocol, artistId: Int) {
         self.view = view
@@ -28,13 +29,15 @@ class AlbumListPresenter: AlbumListPresenterProtocol{
     }
     
     func sendAlbumName(whith id: Int, navigationController: UINavigationController) {
-        //router.sendInfoToSongsListView(albumName: name, navigationController: navigationController)
+        let albumId = albumList.albums[id].id
+        router.showAlbums(with: albumId, navigationController: navigationController)
     }
 }
 
 extension AlbumListPresenter {
     
     func albumListDidFetch(albumList: ArtistAlbumEntity) {
+        self.albumList = albumList
         view?.updateView(albumList: albumList)
     }
     

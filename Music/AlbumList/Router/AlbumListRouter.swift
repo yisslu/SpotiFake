@@ -11,7 +11,8 @@ import UIKit
 
 class AlbumListRouter: AlbumListRouterProtocol{
     func showAlbums(with id: Int, navigationController: UINavigationController) {
-        let songsListViewController = SongsListBuilder.showSongsListBuilder()
+        let songsListViewController = SongsListBuilder.showSongsListBuilder(albumId: id)
         
+        navigationController.pushViewController(songsListViewController, animated: true)
     }
 }

@@ -11,6 +11,12 @@ struct ArtistAlbumEntity: Codable, Identifiable {
     let id: Int
     let artistName: String
     let albums: [Album]
+    
+    init() {
+        self.id = 0
+        self.artistName = ""
+        self.albums = []
+    }
 }
 
 struct Album: Codable {

@@ -10,11 +10,12 @@ import UIKit
 
 
 enum SongsListBuilder{
-    static func showSongsListBuilder() -> SongsListViewController{
+    static func showSongsListBuilder(albumId: Int) -> SongsListViewController{
         let view = SongsListViewController()
         let router = SongsListRouter()
         let interactor = SongsListInteractor()
-        let presenter = SongsListPresenter(view: view, router: router, interactor: interactor)
+        let mapper = MapperSongsModel()
+        let presenter = SongsListPresenter(view: view, router: router, interactor: interactor, albumId: albumId, mapper: mapper)
         view.presenter = presenter
         interactor.presenter = presenter
         

@@ -14,26 +14,21 @@ protocol SongsListPresenterProtocol: AnyObject {
     var router: SongsListRouterProtocol {get set}
     var interactor: SongsListInputInteractorProtocol {get set}
     
-    func getSongsList(with name: String)
-    func sendSongName(with name: String, navigationController: UINavigationController)
-    func transformSecondsToMinutesFor(this time: Int) -> String
+    func getSongsList()
+    func sendSongName(with songId: Int, navigationController: UINavigationController)
+    func songsListDidFetch(album: SongsListEntity)
 }
 
 protocol SongsListViewProtocol: AnyObject{
     var presenter: SongsListPresenterProtocol? {get set}
-    func updateView(songsList: Int, image: UIImage)
+    func updateView(album: SongsListModel)
 }
 
 protocol SongsListInputInteractorProtocol: AnyObject{
-    var presenter: SongsListOutputInteractorProtocol? {get set}
-    func fetchSongsList(with name: String)
-}
-
-protocol SongsListOutputInteractorProtocol: AnyObject{
-    
-    func songsListDidFetch(songsList: Int, image: UIImage)
+    var presenter: SongsListPresenterProtocol? {get set}
+    func fetchSongsList(with albumId: Int)
 }
 
 protocol SongsListRouterProtocol: AnyObject{
-    func sendInfoToReproductorView(name: String, navigationController: UINavigationController)
+    func sendInfoToReproductorView(songId: Int, navigationController: UINavigationController)
 }

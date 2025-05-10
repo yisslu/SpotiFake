@@ -10,8 +10,7 @@ import UIKit
 
 
 class SongsListRouter: SongsListRouterProtocol{
-    func sendInfoToReproductorView(name: String, navigationController: UINavigationController) {
+    func sendInfoToReproductorView(songId: Int, navigationController: UINavigationController) {
         
     }
-
 }

@@ -4,17 +4,17 @@
     "artistName": "The Beatles",
     "albums": [
       {
-        "id": 1,
+        "id": 101,
         "image": "Beatles_Abbey_Road",
         "title": "Abbey Road"
       },
       {
-        "id": 2,
+        "id": 102,
         "image": "letItBeBeatles",
         "title": "Let It Be"
       },
       {
-        "id": 3,
+        "id": 103,
         "image": "revolverBeatles",
         "title": "Revolver"
       }
@@ -25,17 +25,17 @@
     "artistName": "Queen",
     "albums": [
       {
-        "id": 1,
+        "id": 104,
         "image": "queen_album_1",
         "title": "A Night at the Opera"
       },
       {
-        "id": 2,
+        "id": 105,
         "image": "queen_album_2",
         "title": "News of the World"
       },
       {
-        "id": 3,
+        "id": 106,
         "image": "queen_album_3",
         "title": "The Game"
       }
@@ -46,17 +46,17 @@
     "artistName": "Pink Floyd",
     "albums": [
       {
-        "id": 1,
+        "id": 107,
         "image": "pinkfloyd_album_1",
         "title": "The Dark Side of the Moon"
       },
       {
-        "id": 2,
+        "id": 108,
         "image": "pinkfloyd_album_2",
         "title": "Wish You Were Here"
       },
       {
-        "id": 3,
+        "id": 109,
         "image": "pinkfloyd_album_3",
         "title": "Animals"
       }
@@ -67,17 +67,17 @@
     "artistName": "Led Zeppelin",
     "albums": [
       {
-        "id": 1,
+        "id": 110,
         "image": "zeppelin_album_1",
         "title": "Led Zeppelin IV"
       },
       {
-        "id": 2,
+        "id": 111,
         "image": "zeppelin_album_2",
         "title": "Physical Graffiti"
       },
       {
-        "id": 3,
+        "id": 112,
         "image": "zeppelin_album_3",
         "title": "Houses if the Holy"
       }
@@ -88,17 +88,17 @@
     "artistName": "David Bowie",
     "albums": [
       {
-        "id": 1,
+        "id": 113,
         "image": "bowie_album_1",
         "title": "The Rise and Fall of Ziggy Stardust"
       },
       {
-        "id": 2,
+        "id": 114,
         "image": "bowie_album_2",
         "title": "Heroes"
       },
       {
-        "id": 3,
+        "id": 115,
         "image": "bowie_album_3",
         "title": "Hunky Dory"
       }

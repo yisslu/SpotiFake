@@ -1,0 +1,182 @@
+[
+  {
+    "artistId": 1,
+    "albumId": 101,
+    "albumName": "Abbey Road",
+    "albumImage": "Beatles_Abbey_Road",
+    "songs": [
+      { "id": 1001, "songName": "Come Together", "duration": 259 },
+      { "id": 1002, "songName": "Something", "duration": 183 },
+      { "id": 1003, "songName": "Maxwell's Silver Hammer", "duration": 207 },
+      { "id": 1004, "songName": "Octopus's Garden", "duration": 170 }
+    ]
+  },
+  {
+    "artistId": 1,
+    "albumId": 102,
+    "albumName": "Let It Be",
+    "albumImage": "letItBeBeatles",
+    "songs": [
+      { "id": 1005, "songName": "Let It Be", "duration": 243 },
+      { "id": 1006, "songName": "Across the Universe", "duration": 221 },
+      { "id": 1007, "songName": "I Me Mine", "duration": 138 },
+      { "id": 1008, "songName": "Get Back", "duration": 186 }
+    ]
+  },
+  {
+    "artistId": 1,
+    "albumId": 103,
+    "albumName": "Revolver",
+    "albumImage": "revolverBeatles",
+    "songs": [
+      { "id": 1009, "songName": "Eleanor Rigby", "duration": 138 },
+      { "id": 1010, "songName": "Yellow Submarine", "duration": 162 },
+      { "id": 1011, "songName": "Good Day Sunshine", "duration": 133 },
+      { "id": 1012, "songName": "For No One", "duration": 120 }
+    ]
+  },
+  {
+    "artistId": 2,
+    "albumId": 104,
+    "albumName": "A Night at the Opera",
+    "albumImage": "queen_album_1",
+    "songs": [
+      { "id": 1013, "songName": "Bohemian Rhapsody", "duration": 354 },
+      { "id": 1014, "songName": "You're My Best Friend", "duration": 170 },
+      { "id": 1015, "songName": "Love of My Life", "duration": 210 },
+      { "id": 1016, "songName": "'39", "duration": 204 }
+    ]
+  },
+  {
+    "artistId": 2,
+    "albumId": 105,
+    "albumName": "News of the World",
+    "albumImage": "queen_album_2",
+    "songs": [
+      { "id": 1017, "songName": "We Will Rock You", "duration": 122 },
+      { "id": 1018, "songName": "We Are the Champions", "duration": 179 },
+      { "id": 1019, "songName": "Spread Your Wings", "duration": 276 },
+      { "id": 1020, "songName": "It's Late", "duration": 447 }
+    ]
+  },
+  {
+    "artistId": 2,
+    "albumId": 106,
+    "albumName": "The Game",
+    "albumImage": "queen_album_3",
+    "songs": [
+      { "id": 1021, "songName": "Another One Bites the Dust", "duration": 217 },
+      { "id": 1022, "songName": "Crazy Little Thing Called Love", "duration": 161 },
+      { "id": 1023, "songName": "Save Me", "duration": 223 },
+      { "id": 1024, "songName": "Play the Game", "duration": 204 }
+    ]
+  },
+  {
+    "artistId": 3,
+    "albumId": 107,
+    "albumName": "The Dark Side of the Moon",
+    "albumImage": "pinkfloyd_album_1",
+    "songs": [
+      { "id": 1025, "songName": "Money", "duration": 382 },
+      { "id": 1026, "songName": "Time", "duration": 413 },
+      { "id": 1027, "songName": "Us and Them", "duration": 470 },
+      { "id": 1028, "songName": "Brain Damage", "duration": 228 }
+    ]
+  },
+  {
+    "artistId": 3,
+    "albumId": 108,
+    "albumName": "Wish You Were Here",
+    "albumImage": "pinkfloyd_album_2",
+    "songs": [
+      { "id": 1029, "songName": "Shine On You Crazy Diamond", "duration": 810 },
+      { "id": 1030, "songName": "Wish You Were Here", "duration": 335 },
+      { "id": 1031, "songName": "Welcome to the Machine", "duration": 437 },
+      { "id": 1032, "songName": "Have a Cigar", "duration": 309 }
+    ]
+  },
+  {
+    "artistId": 3,
+    "albumId": 109,
+    "albumName": "Animals",
+    "albumImage": "pinkfloyd_album_3",
+    "songs": [
+      { "id": 1033, "songName": "Dogs", "duration": 1024 },
+      { "id": 1034, "songName": "Pigs (Three Different Ones)", "duration": 674 },
+      { "id": 1035, "songName": "Sheep", "duration": 614 },
+      { "id": 1036, "songName": "Pigs on the Wing", "duration": 81 }
+    ]
+  },
+  {
+    "artistId": 4,
+    "albumId": 110,
+    "albumName": "Led Zeppelin IV",
+    "albumImage": "zeppelin_album_1",
+    "songs": [
+      { "id": 1037, "songName": "Stairway to Heaven", "duration": 482 },
+      { "id": 1038, "songName": "Black Dog", "duration": 295 },
+      { "id": 1039, "songName": "Rock and Roll", "duration": 221 },
+      { "id": 1040, "songName": "Going to California", "duration": 217 }
+    ]
+  },
+  {
+    "artistId": 4,
+    "albumId": 111,
+    "albumName": "Physical Graffiti",
+    "albumImage": "zeppelin_album_2",
+    "songs": [
+      { "id": 1041, "songName": "Kashmir", "duration": 517 },
+      { "id": 1042, "songName": "In My Time of Dying", "duration": 662 },
+      { "id": 1043, "songName": "Houses of the Holy", "duration": 246 },
+      { "id": 1044, "songName": "Trampled Under Foot", "duration": 336 }
+    ]
+  },
+  {
+    "artistId": 4,
+    "albumId": 112,
+    "albumName": "Houses of the Holy",
+    "albumImage": "zeppelin_album_3",
+    "songs": [
+      { "id": 1045, "songName": "The Ocean", "duration": 267 },
+      { "id": 1046, "songName": "No Quarter", "duration": 421 },
+      { "id": 1047, "songName": "Over the Hills and Far Away", "duration": 278 },
+      { "id": 1048, "songName": "D'yer Mak'er", "duration": 267 }
+    ]
+  },
+  {
+    "artistId": 5,
+    "albumId": 113,
+    "albumName": "The Rise and Fall of Ziggy Stardust",
+    "albumImage": "bowie_album_1",
+    "songs": [
+      { "id": 1049, "songName": "Starman", "duration": 271 },
+      { "id": 1050, "songName": "Suffragette City", "duration": 209 },
+      { "id": 1051, "songName": "Ziggy Stardust", "duration": 196 },
+      { "id": 1052, "songName": "Rock 'n' Roll Suicide", "duration": 170 }
+    ]
+  },
+  {
+    "artistId": 5,
+    "albumId": 114,
+    "albumName": "Heroes",
+    "albumImage": "bowie_album_2",
+    "songs": [
+      { "id": 1053, "songName": "Heroes", "duration": 372 },
+      { "id": 1054, "songName": "Joe the Lion", "duration": 225 },
+      { "id": 1055, "songName": "Sons of the Silent Age", "duration": 228 },
+      { "id": 1056, "songName": "Blackout", "duration": 234 }
+    ]
+  },
+  {
+    "artistId": 5,
+    "albumId": 115,
+    "albumName": "Hunky Dory",
+    "albumImage": "bowie_album_3",
+    "songs": [
+      { "id": 1057, "songName": "Life on Mars?", "duration": 242 },
+      { "id": 1058, "songName": "Changes", "duration": 215 },
+      { "id": 1059, "songName": "Oh! You Pretty Things", "duration": 196 },
+      { "id": 1060, "songName": "Queen Bitch", "duration": 187 }
+    ]
+  }
+]

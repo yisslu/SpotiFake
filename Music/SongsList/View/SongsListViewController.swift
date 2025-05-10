@@ -19,8 +19,7 @@ class SongsListViewController: UIViewController, SongsListViewProtocol, UITableV
     
     var presenter: (any SongsListPresenterProtocol)?
     
-    var songsArray: Int?
-    var albumName: String?
+    var album = SongsListModel()
     
     private var customTableView: UITableView = {
         let table = UITableView()
@@ -47,7 +46,7 @@ class SongsListViewController: UIViewController, SongsListViewProtocol, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
-        presenter?.getSongsList(with: albumName ?? "")
+        presenter?.getSongsList()
         view.backgroundColor = .systemBackground
         view.addSubview(stack)
         addStack()
@@ -58,9 +57,9 @@ class SongsListViewController: UIViewController, SongsListViewProtocol, UITableV
         customTableView.delegate = self
     }
     
-    func updateView(songsList: Int, image: UIImage) {
-        songsArray = songsList
-        imageView = UIImageView(image: image)
+    func updateView(album: SongsListModel) {
+        self.album = album
+        imageView.image = UIImage(named: album.albumImage)
     }
     
     func addImage(){
@@ -83,21 +82,20 @@ class SongsListViewController: UIViewController, SongsListViewProtocol, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return songsArray.count
-        return 1
+        return album.songs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell2")
-//        cell.textLabel!.text = songsArray[indexPath.row].songName
-//        
-//        let time = presenter?.transformSecondsToMinutesFor(this: songsArray[indexPath.row].duration)
-//        
-//        cell.detailTextLabel?.text = time
+        
+        let song = album.songs[indexPath.row]
+        cell.textLabel!.text = song.songName
+        
+        cell.detailTextLabel?.text = song.duration
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.sendSongName(with: albumName ?? "", navigationController: navigationController!)
+        presenter?.sendSongName(with: indexPath.row , navigationController: navigationController!)
     }
 }

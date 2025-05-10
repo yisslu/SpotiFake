@@ -8,37 +8,33 @@
 import UIKit
 
 class SongsListPresenter: SongsListPresenterProtocol{
-    
-    
-    
+ 
     weak var view: SongsListViewProtocol?
     var router: SongsListRouterProtocol
     var interactor: SongsListInputInteractorProtocol
+    var albumId: Int
+    var mapper: MapperSongsModel
     
-    init(view: SongsListViewProtocol, router: SongsListRouterProtocol, interactor: SongsListInputInteractorProtocol) {
+    init(view: SongsListViewProtocol, router: SongsListRouterProtocol, interactor: SongsListInputInteractorProtocol, albumId: Int, mapper: MapperSongsModel) {
         self.view = view
         self.router = router
         self.interactor = interactor
+        self.albumId = albumId
+        self.mapper = mapper
     }
     
-    func getSongsList(with name: String) {
-        interactor.fetchSongsList(with: name)
+    func getSongsList() {
+        interactor.fetchSongsList(with: albumId)
     }
     
-    func sendSongName(with name: String, navigationController: UINavigationController) {
-        router.sendInfoToReproductorView(name: name, navigationController: navigationController)
-    }
-    
-    func transformSecondsToMinutesFor(this time: Int) -> String{
-        let minutes = (time % 3600) / 60
-        let seconds = (time % 3600) % 60
-        return String(format: "%02d:%02d", minutes, seconds)
-    }
-    
+    func sendSongName(with songId: Int, navigationController: UINavigationController) {
+        router.sendInfoToReproductorView(songId: songId, navigationController: navigationController)
+    }    
 }
 
-extension SongsListPresenter: SongsListOutputInteractorProtocol{
-    func songsListDidFetch(songsList: Int, image: UIImage) {
-        view?.updateView(songsList: songsList, image: image)
+extension SongsListPresenter {
+    func songsListDidFetch(album: SongsListEntity) {
+        let mappedAlbum = mapper.map(album: album)
+        view?.updateView(album: mappedAlbum)
     }
 }
